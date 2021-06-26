@@ -10,9 +10,12 @@ const ReplySchema = new Schema(
     },
     replyBody: {
       type: String,
+      required: "There is nothing written in the body!",
+      trim: true
     },
     writtenBy: {
       type: String,
+      required: true
     },
     createdAt: {
       type: Date,
@@ -31,9 +34,11 @@ const CommentSchema = new Schema(
   {
     writtenBy: {
       type: String,
+      required: true
     },
     commentBody: {
       type: String,
+      required: "There is nothing written in the body!"
     },
     createdAt: {
       type: Date,
